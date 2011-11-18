@@ -3,13 +3,16 @@
 
 
 /* TEAM */
-  <your title>: <your name>
-  Site:
-  Twitter:
-  Location:
+  Web Developer: Louis Bourque
+  Site: http://louisbourque.github.com/
+  Twitter: http://twitter.com/louisbourque
+  Location: Ottawa, On, Canada
 
 /* THANKS */
-  Names (& URL):
+  Names (& URL): 
+  Paul Irish http://paulirish.com/
+  Github http://github.com/
+  Rockcliffe Flying Club http://www.rfc.ca/
 
 /* SITE */
   Standards: HTML5, CSS3
