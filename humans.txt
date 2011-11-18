@@ -10,9 +10,9 @@
 
 /* THANKS */
   Names (& URL): 
-  Paul Irish http://paulirish.com/
-  Github http://github.com/
-  Rockcliffe Flying Club http://www.rfc.ca/
+  Paul Irish http://paulirish.com/ (for the boilerplate)
+  Github http://github.com/ (for the hosting)
+  Rockcliffe Flying Club http://www.rfc.ca/ (for the experience)
 
 /* SITE */
   Standards: HTML5, CSS3
