@@ -218,13 +218,51 @@ header>h1{
 	margin:0;
 	padding:2px;
 }
+footer{
+	background-color: #131313;
+	color:#fff;
+	text-align:center;
+	padding:3px;
+}
+footer a,footer a:visited{
+	color:#fff;
+}
+footer a:hover { color: #06e; }
+h2{
+	margin:0;
+	padding:5px;
+	background:#ccc;
+}
 
+h3{
+	margin:0;
+	background:#eee;
+	padding:5px;
+}
 
+ul{
+	list-style:none;
+}
 
+.module{
+	width:50%;
+	float:left;
+}
+.module ul{
+	padding-left:5px;
+}
+.module li{
+	padding-bottom:10px;
+}
 
+a.github_link{
 
-
-
+}
+a.demo_link{
+	color:#090;
+	font-weight:bold;
+}
+a.demo_link:hover { color: #06e; }
 
 
 
