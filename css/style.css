@@ -206,6 +206,10 @@ td { vertical-align: top; }
    Author: Louis Bourque
    ========================================================================== */
 
+body{
+	background:#016791 url('../img/bg.jpg') no-repeat fixed 30% -3%;
+}
+
 header{
 	background-color: #131313;
 	color:#fff;
@@ -214,7 +218,7 @@ header{
 	text-shadow: 0 0 10px #CCCCCC;
 }
 
-header>h1{
+header h1{
 	margin:0;
 	padding:2px;
 }
@@ -228,17 +232,6 @@ footer a,footer a:visited{
 	color:#fff;
 }
 footer a:hover { color: #06e; }
-h2{
-	margin:0;
-	padding:5px;
-	background:#ccc;
-}
-
-h3{
-	margin:0;
-	background:#eee;
-	padding:5px;
-}
 
 ul{
 	list-style:none;
@@ -246,24 +239,67 @@ ul{
 
 .module{
 	width:50%;
-	float:left;
+	background:#eee;
+	margin:7px;
+	
+  -webkit-border-radius: 7px; 
+     -moz-border-radius: 7px; 
+          border-radius: 7px;           
+  -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box; 
+
 }
-.module ul{
-	padding-left:5px;
-}
-.module li{
-	padding-bottom:10px;
+.module h2{
+	margin:0;
+	padding:5px;
+	text-align:center;
+	border-bottom:1px solid #aaa;
+  background-color: #ccc;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ccc), to(#999)); 
+  background-image: -webkit-linear-gradient(top, #ccc, #999); 
+  background-image:    -moz-linear-gradient(top, #ccc, #999); 
+  background-image:     -ms-linear-gradient(top, #ccc, #999); 
+  background-image:      -o-linear-gradient(top, #ccc, #999); 
+  background-image:         linear-gradient(top, #ccc, #999);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#ccc', EndColorStr='#999'); 
+
+  -webkit-border-radius: 7px 7px 0 0;
+     -moz-border-radius: 7px 7px 0 0;
+          border-radius: 7px 7px 0 0;
+  -moz-background-clip-top: padding; -webkit-background-clip: padding-box; background-clip: padding-box; 
+
 }
 
+.item{
+	padding:7px;
+}
+.item h3{
+	margin:0;
+	background:#eee;
+	padding:5px;
+}
+.item p{
+	padding-left:10px;
+}
+.item div.links{
+	text-align:right;
+}
 a.github_link{
-
+	
 }
 a.demo_link{
 	color:#090;
 	font-weight:bold;
 }
-a.demo_link:hover { color: #06e; }
-
+a.demo_link:hover { 
+	color: #06e;
+}
+a{
+-webkit-transition: color .25s linear;  /* Saf3.2+, Chrome */
+     -moz-transition: color .25s linear;  /* FF4+ */
+      -ms-transition: color .25s linear;  /* IE10? */
+       -o-transition: color .25s linear;  /* Opera 10.5+ */
+          transition: color .25s linear; 
+}
 
 
 
