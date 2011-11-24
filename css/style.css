@@ -300,9 +300,6 @@ a.demo_link{
 	color:#0D7196;
 	font-weight:bold;
 }
-a.demo_link:visited{
-	color:#094B63;
-}
 a:hover { 
 	color: #9B0001;
 }
