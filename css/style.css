@@ -231,7 +231,7 @@ footer{
 footer a,footer a:visited{
 	color:#fff;
 }
-footer a:hover { color: #06e; }
+footer a:hover { color: #9B0001; }
 
 ul{
 	list-style:none;
@@ -240,12 +240,17 @@ ul{
 .module{
 	width:50%;
 	background:#eee;
-	margin:7px;
+	margin:12px;
 	
   -webkit-border-radius: 7px; 
      -moz-border-radius: 7px; 
           border-radius: 7px;           
   -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box; 
+
+
+  -webkit-box-shadow: 2px 2px 4px #000; 
+     -moz-box-shadow: 2px 2px 4px #000; 
+          box-shadow: 2px 2px 4px #000; 
 
 }
 .module h2{
@@ -266,16 +271,18 @@ ul{
      -moz-border-radius: 7px 7px 0 0;
           border-radius: 7px 7px 0 0;
   -moz-background-clip-top: padding; -webkit-background-clip: padding-box; background-clip: padding-box; 
-
 }
-
 .item{
 	padding:7px;
+	border-bottom:3px solid #ccc;
 }
 .item h3{
 	margin:0;
-	background:#eee;
 	padding:5px;
+	color:#0D7196;
+}
+.item h3 a{
+	text-decoration:none;
 }
 .item p{
 	padding-left:10px;
@@ -283,15 +290,21 @@ ul{
 .item div.links{
 	text-align:right;
 }
+.last_item{
+	border:0;
+}
 a.github_link{
 	
 }
 a.demo_link{
-	color:#090;
+	color:#0D7196;
 	font-weight:bold;
 }
-a.demo_link:hover { 
-	color: #06e;
+a.demo_link:visited{
+	color:#094B63;
+}
+a:hover { 
+	color: #9B0001;
 }
 a{
 -webkit-transition: color .25s linear;  /* Saf3.2+, Chrome */
