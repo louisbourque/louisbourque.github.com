@@ -206,10 +206,6 @@ td { vertical-align: top; }
    Author: Louis Bourque
    ========================================================================== */
 
-body{
-	background:#016791 url('../img/bg.jpg') no-repeat fixed 30% -3%;
-}
-
 header{
 	background-color: #131313;
 	color:#fff;
@@ -238,9 +234,8 @@ ul{
 }
 
 .module{
-	width:50%;
+	width:100%;
 	background:#eee;
-	margin:12px;
 	
   -webkit-border-radius: 7px; 
      -moz-border-radius: 7px; 
@@ -322,6 +317,15 @@ a{
 
 @media only screen and (min-width: 480px) {
   /* Style adjustments for viewports 480px and over go here */
+
+body{
+	background:#016791 url('../img/bg.jpg') no-repeat fixed 30% -3%;
+}
+
+.module{
+	width:50%;
+	margin:12px;
+}
 
 }
 
