@@ -313,6 +313,14 @@ a.demo_link{
 	color:#0D7196;
 	font-weight:bold;
 }
+.skill{
+	display:inline-block;
+	padding:5px;
+	width: 100px;
+}
+.skill img{
+	padding:3px;
+}
 a:hover { 
 	color: #9B0001;
 }
