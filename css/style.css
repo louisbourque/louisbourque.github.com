@@ -218,7 +218,6 @@ header, footer{
 
 header h1{
 	display:inline;
-	margin:0;
 	padding:2px;
 	font-size:1.6em;
 }
@@ -268,12 +267,12 @@ ul{
 	text-align:center;
 	border-bottom:1px solid #aaa;
   background-color: #ccc;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#ccc), to(#999)); 
-  background-image: -webkit-linear-gradient(top, #ccc, #999); 
-  background-image:    -moz-linear-gradient(top, #ccc, #999); 
-  background-image:     -ms-linear-gradient(top, #ccc, #999); 
-  background-image:      -o-linear-gradient(top, #ccc, #999); 
-  background-image:         linear-gradient(top, #ccc, #999);
+  background: -webkit-gradient(linear, left top, left bottom, from(#ccc), to(#999)); 
+  background: -webkit-linear-gradient(top, #ccc, #999); 
+  background:    -moz-linear-gradient(top, #ccc, #999); 
+  background:     -ms-linear-gradient(top, #ccc, #999); 
+  background:      -o-linear-gradient(top, #ccc, #999); 
+  background:         linear-gradient(top, #ccc, #999);
             filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#ccc', EndColorStr='#999'); 
 
   -webkit-border-radius: 7px 7px 0 0;
@@ -300,14 +299,11 @@ ul{
 .item p{
 	padding-left:5px;
 }
-.item div.links{
+.item .links{
 	text-align:right;
 }
 .last_item{
 	border:0;
-}
-a.github_link{
-	
 }
 a.demo_link{
 	color:#0D7196;
