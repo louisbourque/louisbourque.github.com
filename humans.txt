@@ -6,17 +6,15 @@
   Web Developer: Louis Bourque
   Site: http://louisbourque.github.com/
   Twitter: http://twitter.com/louisbourque
-  Location: Ottawa, On, Canada
+  Location: Calgary, Ab, Canada
 
 /* THANKS */
-  Names (& URL): 
+  Names (& URL):
   Paul Irish http://paulirish.com/ (for the boilerplate)
   Github http://github.com/ (for the hosting)
-  Rockcliffe Flying Club http://www.rfc.ca/ (for the experience)
 
 /* SITE */
   Standards: HTML5, CSS3
-  Components: Modernizr, jQuery
   Software:
 
 
