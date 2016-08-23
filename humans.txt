@@ -4,7 +4,7 @@
 
 /* TEAM */
   Web Developer: Louis Bourque
-  Site: http://louisbourque.github.com/
+  Site: http://louisbourque.ca/
   Twitter: http://twitter.com/louisbourque
   Location: Calgary, Ab, Canada
 
