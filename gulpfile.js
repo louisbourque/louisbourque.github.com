@@ -1,13 +1,14 @@
 const gulp = require('gulp');
 const minifycss = require('gulp-clean-css');
 //const uglify = require('gulp-uglify');
-const concatcss = require('gulp-concat-css');
+//const concatcss = require('gulp-concat-css');
 //const concat = require('gulp-concat');
 const imagemin = require('gulp-imagemin');
 const minifyhtml = require('gulp-minify-html');
-const htmlreplace = require('gulp-html-replace');
+//const htmlreplace = require('gulp-html-replace');
+const inline = require('gulp-inline');
 
-gulp.task('default', ['css','img','html']);
+gulp.task('default', ['img','html']);
 
 // CSS minification task
 gulp.task('css', function() {
@@ -35,8 +36,10 @@ gulp.task('img', function () {
 // minify HTML task
 gulp.task('html', function () {
   return gulp.src('src/*.html')
-  .pipe(htmlreplace({
-      'css': 'css/style.min.css'
+  .pipe(inline({
+    base: 'src/',
+    css: minifycss,
+    disabledTypes: ['svg', 'img', 'js'] // Only inline css files
   }))
     .pipe(minifyhtml())
     .pipe(gulp.dest(''));
