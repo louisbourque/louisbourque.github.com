@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Louis&#39; Blog</title>
+  <subtitle>All about software development for the web</subtitle>
+  <link href="/blog/atom.xml" rel="self"/>
+  
+  <link href="http://www.louisbourque.ca/blog/"/>
+  <updated>2016-08-30T18:02:46.519Z</updated>
+  <id>http://www.louisbourque.ca/blog/</id>
+  
+  <author>
+    <name>Louis Bourque</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://www.louisbourque.ca/blog/2016/08/hello-world/"/>
+    <id>http://www.louisbourque.ca/blog/2016/08/hello-world/</id>
+    <published>2016-08-30T06:00:00.000Z</published>
+    <updated>2016-08-30T18:02:46.519Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to my first blog post. In this blog I hope to write about the things that interest me with a focus on web development and programming.</p>
+<p>I’m a minimalist in everything I do. I prefer simple solutions over complexity. Recently, I setup a web server on a Raspberry Pi with Wordpress. I played around with it for a while. It’s a great product with amazing plugins. Easy to use and write great posts. Yet, the complexity was bugging me. Pages were a little slow to load, even over my home network. The default theme had way too much CSS and JavaScript for my liking. The admin interface has so many features, I felt the constant urge to tweak settings.</p>
+<p>I decided instead to go with a static blog. <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a> looked like it had a nice balance of functionality and simplicity. It lets me create new posts using MarkDown with minimal friction and generates an RSS feed. All posts are just files in a folder, making backups a breeze and moving to a new platform should be effortless.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Welcome to my first blog post. In this blog I hope to write about the things that interest me with a focus on web development and program
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
