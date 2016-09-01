@@ -86,8 +86,7 @@ a{
 }
 
 
-
-@media only screen and (min-width: 580px) {
+@media only screen and (min-width: 615px) {
   /* Style adjustments for viewports 480px and over go here */
 
 body{
@@ -100,7 +99,12 @@ header h1{
 main{
 	width:62%;
 	min-width:540px;
-	margin:11px;
+	margin:21px;
 }
-
+header{
+	padding:5px;
+	margin: 1em auto 0 auto;
+	width:590px;
+	border-radius: 5px;
+}
 }
