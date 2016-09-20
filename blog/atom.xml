@@ -5,7 +5,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="http://www.louisbourque.ca/blog/"/>
-  <updated>2016-08-30T18:02:46.519Z</updated>
+  <updated>2016-09-20T06:02:38.006Z</updated>
   <id>http://www.louisbourque.ca/blog/</id>
   
   <author>
@@ -16,11 +16,32 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Free Developer Business Card</title>
+    <link href="http://www.louisbourque.ca/blog/2016/09/Developer-Business-Card/"/>
+    <id>http://www.louisbourque.ca/blog/2016/09/Developer-Business-Card/</id>
+    <published>2016-09-19T22:37:09.000Z</published>
+    <updated>2016-09-20T06:02:38.006Z</updated>
+    
+    <content type="html"><![CDATA[<p>While thinking up ideas for business card designs, I came across this great idea for web developers. I created some samples, feel free to download and modify. If you come up with a cool improvement, feel free to <a href="mailto:louis@louisbourque.ca?Subject=Check out my cool business card design!" target="_blank" rel="external">share it with me</a>.</p>
+<p>Click the preview image to download an XCF file which can easily be edited in <a href="https://www.gimp.org/" target="_blank" rel="external">GIMP</a>.</p>
+<p><a href="/blog/2016/09/Developer-Business-Card/Business Card Front.xcf"><img src="/blog/2016/09/Developer-Business-Card/Business Card Front.png" alt="Business Card Front View (company)"></a><br><a href="/blog/2016/09/Developer-Business-Card/Business Card Front-personal.xcf"><img src="/blog/2016/09/Developer-Business-Card/Business Card Front-personal.png" alt="Business Card Front View (personal)"></a><br><a href="/blog/2016/09/Developer-Business-Card/Business Card Back-json.xcf"><img src="/blog/2016/09/Developer-Business-Card/Business Card Back-json.png" alt="Business Card Back View with JSON style"></a><br><a href="/blog/2016/09/Developer-Business-Card/Business Card Back-css.xcf"><img src="/blog/2016/09/Developer-Business-Card/Business Card Back-css.png" alt="Business Card Back View with CSS style"></a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;While thinking up ideas for business card designs, I came across this great idea for web developers. I created some samples, feel free to
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>Hello World</title>
     <link href="http://www.louisbourque.ca/blog/2016/08/hello-world/"/>
     <id>http://www.louisbourque.ca/blog/2016/08/hello-world/</id>
     <published>2016-08-30T06:00:00.000Z</published>
-    <updated>2016-08-30T18:02:46.519Z</updated>
+    <updated>2016-09-19T22:26:25.201Z</updated>
     
     <content type="html"><![CDATA[<p>Welcome to my first blog post. In this blog I hope to write about the things that interest me with a focus on web development and programming.</p>
 <p>I’m a minimalist in everything I do. I prefer simple solutions over complexity. Recently, I setup a web server on a Raspberry Pi with Wordpress. I played around with it for a while. It’s a great product with amazing plugins. Easy to use and write great posts. Yet, the complexity was bugging me. Pages were a little slow to load, even over my home network. The default theme had way too much CSS and JavaScript for my liking. The admin interface has so many features, I felt the constant urge to tweak settings.</p>
