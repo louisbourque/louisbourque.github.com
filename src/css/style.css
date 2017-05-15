@@ -90,7 +90,7 @@ a{
   /* Style adjustments for viewports 480px and over go here */
 
 body{
-	background:#016791 url('../img/bg.jpg') no-repeat fixed 20% 0%;
+	background:#016791 url('img/bg.jpg') no-repeat fixed 20% 0%;
 	background-size:cover;
 }
 header h1{
