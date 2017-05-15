@@ -3,3 +3,4 @@
 
 User-agent: *
 
+Host: www.louisbourque.ca
