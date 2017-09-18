@@ -1,129 +1,129 @@
-header, footer{
-	background-color:rgb(40,40,40);
-	background-color:rgba(40,40,40,0.8);
-	color:#fff;
-	font-weight:bold;
-	text-align:center;
-	padding:3px;
+header,
+footer {
+	background-color: rgb(40, 40, 40);
+	background-color: rgba(40, 40, 40, 0.8);
+	color: #fff;
+	font-weight: bold;
+	text-align: center;
+	padding: 3px;
 }
 
-header h1{
-	padding:2px;
-	font-size:1.6em;
+header h1 {
+	padding: 2px;
+	font-size: 1.6em;
 }
-header a,header a:visited{
-	color:#fff;
-	padding:13px;
-	text-decoration:none;
+header a,
+header a:visited {
+	color: #fff;
+	padding: 13px;
+	text-decoration: none;
 }
-header a:hover { color: #CB4041; }
+header a:hover {
+	color: #cb4041;
+}
 
-ul{
-	list-style:none;
+ul {
+	list-style: none;
 }
-main{
-	width:100%;
-	background:#fff;
-	text-align:center;
+main {
+	width: 100%;
+	background: #fff;
+	text-align: center;
 }
-section{
-	width:100%;
-	background:#eee;
-	text-align:left;
-  -webkit-box-shadow: 0 3px 3px #000;
-     -moz-box-shadow: 3px 3px 3px #333;
-          box-shadow: 3px 3px 3px #333;
-
+section {
+	width: 100%;
+	background: #eee;
+	text-align: left;
+	-webkit-box-shadow: 0 3px 3px #000;
+	-moz-box-shadow: 3px 3px 3px #333;
+	box-shadow: 3px 3px 3px #333;
 }
-section h2{
-	font-size:1.2em;
-	margin:0;
-	padding:2px;
-	text-align:center;
-	border-bottom:1px solid #aaa;
-  background-color: #ccc;
+section h2 {
+	font-size: 1.2em;
+	margin: 0;
+	padding: 2px;
+	text-align: center;
+	border-bottom: 1px solid #aaa;
+	background-color: #ccc;
 }
-.about-img{
+.about-img {
 	text-align: center;
 	padding-bottom: 9px;
 }
-.item{
-	padding:3px;
-	border-bottom:2px solid #ccc;
+.item {
+	padding: 3px;
+	border-bottom: 2px solid #ccc;
 }
-.item h3{
-	font-size:1.1em;
-	margin:0;
-	padding:2px;
-	color:#0D7196;
+.item h3 {
+	font-size: 1.1em;
+	margin: 0;
+	padding: 2px;
+	color: #0d7196;
 }
-.item h3 a{
-	text-decoration:none;
+.item h3 a {
+	text-decoration: none;
 }
-.item p{
-	padding-left:5px;
-	margin:1px;
+.item p {
+	padding-left: 5px;
+	margin: 1px;
 }
-.item .links{
-	text-align:right;
+.item .links {
+	text-align: right;
 }
-.last_item{
-	border:0;
+.last_item {
+	border: 0;
 }
-.demo_link{
-	color:#0D7196;
-	font-weight:bold;
+.demo_link {
+	color: #0d7196;
+	font-weight: bold;
 }
 a:hover {
-	color: #9B0001;
+	color: #9b0001;
 }
-a{
--webkit-transition: color .25s linear;  /* Saf3.2+, Chrome */
-     -moz-transition: color .25s linear;  /* FF4+ */
-      -ms-transition: color .25s linear;  /* IE10? */
-       -o-transition: color .25s linear;  /* Opera 10.5+ */
-          transition: color .25s linear;
+a {
+	-webkit-transition: color 0.25s linear; /* Saf3.2+, Chrome */
+	-moz-transition: color 0.25s linear; /* FF4+ */
+	-ms-transition: color 0.25s linear; /* IE10? */
+	-o-transition: color 0.25s linear; /* Opera 10.5+ */
+	transition: color 0.25s linear;
 }
-
 
 @media only screen and (min-width: 730px) {
-  /* Style adjustments for viewports 480px and over go here */
+	/* Style adjustments for viewports 480px and over go here */
 
-body{
-	background:#016791 url('img/bg.jpg') no-repeat fixed 20% 0%;
-	background-size:cover;
-}
-header h1{
-	display:inline;
-}
-main{
-	width:62%;
-	min-width:540px;
-	margin:21px;
-}
-header{
-	padding:5px;
-	margin: 1em auto 0 auto;
-	border-radius: 5px;
-}
+	body {
+		background: #016791 url("img/bg.jpg") no-repeat fixed 20% 0%;
+		background-size: cover;
+	}
+	header h1 {
+		display: inline;
+	}
+	main {
+		width: 62%;
+		min-width: 540px;
+		margin: 21px;
+	}
+	header {
+		padding: 5px;
+		margin: 1em auto 0 auto;
+		border-radius: 5px;
+	}
 
-@supports (grid-area: auto) {
-  .grid-container{
-    display: grid;
-    grid-template-columns: 3fr auto auto 3fr;
-    grid-template-rows: 4rem auto;
-    grid-column-gap: 0rem;
-    grid-row-gap: 2rem;
-    grid-template-areas:
-    ". header header ."
-    "main main . .";
-  }
-  .header {
-    grid-area: header;
-  }
-  .main {
-    grid-area: main;
-		width:120%;
-  }
-}
+	@supports (grid-area: auto) {
+		.grid-container {
+			display: grid;
+			grid-template-columns: 3fr auto auto 3fr;
+			grid-template-rows: 4rem auto;
+			grid-column-gap: 0rem;
+			grid-row-gap: 2rem;
+			grid-template-areas: ". header header ." "main main . .";
+		}
+		.header {
+			grid-area: header;
+		}
+		.main {
+			grid-area: main;
+			width: 120%;
+		}
+	}
 }
