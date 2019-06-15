@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  
+  <title>Support TypeScript with Vue SFC in Sublime Text | Louis&#39; Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="I recently discovered it’s possible to use language servers to enable typescript linting in Vue Single File Components using Sublime Text. This always worked out of the box with .js files, but never f">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Support TypeScript with Vue SFC in Sublime Text">
+<meta property="og:url" content="http://www.louisbourque.ca/blog/2019/06/TypeScript-Vue-SFC-Sublime-Text/index.html">
+<meta property="og:site_name" content="Louis' Blog">
+<meta property="og:description" content="I recently discovered it’s possible to use language servers to enable typescript linting in Vue Single File Components using Sublime Text. This always worked out of the box with .js files, but never f">
+<meta property="og:image" content="http://www.louisbourque.ca/blog/blog/2019/06/TypeScript-Vue-SFC-Sublime-Text/LSP.png">
+<meta property="og:image" content="http://www.louisbourque.ca/blog/blog/2019/06/TypeScript-Vue-SFC-Sublime-Text/AutocompleteTemplate.png">
+<meta property="og:image" content="http://www.louisbourque.ca/blog/blog/2019/06/TypeScript-Vue-SFC-Sublime-Text/Definitions.png">
+<meta property="og:image" content="http://www.louisbourque.ca/blog/blog/2019/06/TypeScript-Vue-SFC-Sublime-Text/TypeError.png">
+<meta property="og:image" content="http://www.louisbourque.ca/blog/blog/2019/06/TypeScript-Vue-SFC-Sublime-Text/TypeErrorConsole.png">
+<meta property="og:updated_time" content="2019-06-15T01:47:28.275Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Support TypeScript with Vue SFC in Sublime Text">
+<meta name="twitter:description" content="I recently discovered it’s possible to use language servers to enable typescript linting in Vue Single File Components using Sublime Text. This always worked out of the box with .js files, but never f">
+<meta name="twitter:image" content="http://www.louisbourque.ca/blog/blog/2019/06/TypeScript-Vue-SFC-Sublime-Text/LSP.png">
+<meta name="twitter:creator" content="@louisbourque">
+  
+    <link rel="alternate" href="/blog/atom.xml" title="Louis&#39; Blog" type="application/atom+xml">
+  
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" integrity="sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="/blog/css/styles.css">
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-27120534-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="main-menu-navbar">
+      <ul class="nav navbar-nav">
+        
+          <li><a class=""
+                 href="/blog/../">Home</a></li>
+        
+          <li><a class=""
+                 href="/blog/archives/">Archives</a></li>
+        
+      </ul>
+
+      <!--
+      <ul class="nav navbar-nav navbar-right">
+        
+          <li><a href="/blog/atom.xml" title="RSS Feed"><i class="fa fa-rss"></i></a></li>
+        
+      </ul>
+      -->
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+  <div class="container">
+    <div class="blog-header">
+  <h1 class="blog-title">Louis&#39; Blog</h1>
+  
+    <p class="lead blog-description">All about software development for the web</p>
+  
+</div>
+
+    <div class="row">
+        <div class="col-sm-8 blog-main">
+          <article id="post-TypeScript-Vue-SFC-Sublime-Text" class="article article-type-post" itemscope itemprop="blogPost">
+
+  <header class="article-header">
+    
+  
+    <h1 class="article-title" itemprop="name">
+      Support TypeScript with Vue SFC in Sublime Text
+    </h1>
+  
+
+
+  </header>
+
+  <div class="article-meta">
+    <div class="article-datetime">
+  <a href="/blog/2019/06/TypeScript-Vue-SFC-Sublime-Text/" class="article-date"><time datetime="2019-06-14T06:00:00.000Z" itemprop="datePublished">June 14th, 2019</time></a>
+</div>
+
+    
+    
+
+  </div>
+  <div class="article-inner">
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>I recently discovered it’s possible to use language servers to enable typescript linting in Vue Single File Components using Sublime Text. This always worked out of the box with .js files, but never for .vue files. The purpose of this post is to document the steps I took to get everything working.</p>
+<p>First, you’re going to need to install Sublime Text, and install the <a href="https://github.com/tomv564/LSP/" target="_blank" rel="external">LSP</a> plugin.</p>
+<p>Then, install <a href="https://github.com/vuejs/vetur/tree/master/server" target="_blank" rel="external">vue-language-server</a>:</p>
+<p><code>npm install -g vue-language-server</code></p>
+<p>To enable vue language server in Sublime Text, go to Preferences -&gt; Package Settings -&gt; LSP -&gt; Settings. In the LSP.sublime-settings – User, enter the following:</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&#123;</div><div class="line">  <span class="attr">"clients"</span>:</div><div class="line">  &#123;</div><div class="line">    <span class="attr">"vue-ls"</span>:</div><div class="line">    &#123;</div><div class="line">      <span class="attr">"command"</span>:</div><div class="line">      [</div><div class="line">        <span class="string">"vls"</span></div><div class="line">      ],</div><div class="line">      <span class="attr">"enabled"</span>: <span class="literal">true</span>,</div><div class="line">      <span class="attr">"languageId"</span>: <span class="string">"vue"</span>,</div><div class="line">      <span class="attr">"scopes"</span>:</div><div class="line">      [</div><div class="line">        <span class="string">"text.html.vue"</span></div><div class="line">      ],</div><div class="line">      <span class="attr">"syntaxes"</span>:</div><div class="line">      [</div><div class="line">        <span class="string">"Packages/Vue Syntax Highlight/Vue Component.sublime-syntax"</span></div><div class="line">      ],</div><div class="line">      <span class="attr">"initializationOptions"</span>: &#123;</div><div class="line">        <span class="attr">"config"</span>: &#123;</div><div class="line">          <span class="attr">"vetur"</span>: &#123;</div><div class="line">            <span class="attr">"useWorkspaceDependencies"</span>: <span class="literal">false</span>,</div><div class="line">            <span class="attr">"completion"</span>: &#123;</div><div class="line">              <span class="attr">"autoImport"</span>: <span class="literal">false</span>,</div><div class="line">              <span class="attr">"useScaffoldSnippets"</span>: <span class="literal">true</span>,</div><div class="line">              <span class="attr">"tagCasing"</span>: <span class="string">"kebab"</span></div><div class="line">            &#125;,</div><div class="line">            <span class="attr">"grammar"</span>: &#123;</div><div class="line">              <span class="attr">"customBlocks"</span>: &#123;</div><div class="line">                <span class="attr">"docs"</span>: <span class="string">"md"</span>,</div><div class="line">                <span class="attr">"i18n"</span>: <span class="string">"json"</span></div><div class="line">              &#125;</div><div class="line">            &#125;,</div><div class="line">            <span class="attr">"validation"</span>: &#123;</div><div class="line">              <span class="attr">"template"</span>: <span class="literal">true</span>,</div><div class="line">              <span class="attr">"style"</span>: <span class="literal">true</span>,</div><div class="line">              <span class="attr">"script"</span>: <span class="literal">true</span></div><div class="line">            &#125;,</div><div class="line">            <span class="attr">"format"</span>: &#123;</div><div class="line">              <span class="attr">"enable"</span>: <span class="literal">true</span>,</div><div class="line">              <span class="attr">"options"</span>: &#123;</div><div class="line">                <span class="attr">"tabSize"</span>: <span class="number">2</span>,</div><div class="line">                <span class="attr">"useTabs"</span>: <span class="literal">false</span></div><div class="line">              &#125;,</div><div class="line">              <span class="attr">"defaultFormatter"</span>: &#123;</div><div class="line">                <span class="attr">"css"</span>: <span class="string">"prettier"</span>,</div><div class="line">                <span class="attr">"postcss"</span>: <span class="string">"prettier"</span>,</div><div class="line">                <span class="attr">"scss"</span>: <span class="string">"prettier"</span>,</div><div class="line">                <span class="attr">"less"</span>: <span class="string">"prettier"</span>,</div><div class="line">                <span class="attr">"stylus"</span>: <span class="string">"prettier"</span>,</div><div class="line">                <span class="attr">"js"</span>: <span class="string">"prettier"</span>,</div><div class="line">                <span class="attr">"ts"</span>: <span class="string">"prettier"</span></div><div class="line">              &#125;,</div><div class="line">              <span class="attr">"defaultFormatterOptions"</span>: &#123;</div><div class="line">                <span class="attr">"js-beautify-html"</span>: &#123;</div><div class="line">                  <span class="attr">"wrap_attributes"</span>: <span class="string">"force-expand-multiline"</span></div><div class="line">                &#125;,</div><div class="line">                <span class="attr">"prettyhtml"</span>: &#123;</div><div class="line">                  <span class="attr">"printWidth"</span>: <span class="number">100</span>,</div><div class="line">                  <span class="attr">"singleQuote"</span>: <span class="literal">false</span>,</div><div class="line">                  <span class="attr">"wrapAttributes"</span>: <span class="literal">false</span>,</div><div class="line">                  <span class="attr">"sortAttributes"</span>: <span class="literal">false</span></div><div class="line">                &#125;</div><div class="line">              &#125;,</div><div class="line">              <span class="attr">"styleInitialIndent"</span>: <span class="literal">false</span>,</div><div class="line">              <span class="attr">"scriptInitialIndent"</span>: <span class="literal">false</span>,</div><div class="line"></div><div class="line">            &#125;,</div><div class="line">            <span class="attr">"trace"</span>: &#123;</div><div class="line">              <span class="attr">"server"</span>: <span class="string">"off"</span></div><div class="line">            &#125;,</div><div class="line">            <span class="attr">"experimental"</span>: &#123;</div><div class="line">              <span class="attr">"templateInterpolationService"</span>: <span class="literal">true</span></div><div class="line">            &#125;</div><div class="line">          &#125;,</div><div class="line">          <span class="attr">"html"</span>: &#123;</div><div class="line">            <span class="attr">"suggest"</span>: <span class="literal">true</span></div><div class="line">          &#125;</div><div class="line">        &#125;</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div></pre></td></tr></table></figure>
+<p>Vue Language Server expects certain configurations to be present, so you have to specify initializationOptions. The  above are the default values.</p>
+<p>You may need to change the command value to the full path of your vls executable, if you did not install it to a location that is available from your $PATH.</p>
+<p>To get the value for syntaxes, open a .vue file and in the SublimeText console, run: <code>view.settings().get(&#39;syntax&#39;)</code></p>
+<p>You may need to setup the language server, to do that, in Sublime Text, press Ctrl+P, then type LSP. From the list, select “LSP: Setup Language Server” and press Enter.</p>
+<img src="/blog/2019/06/TypeScript-Vue-SFC-Sublime-Text/LSP.png" alt="Setup Language Server" title="Setup Language Server">
+<p>Now you can have auto complete suggestions of the template:</p>
+<img src="/blog/2019/06/TypeScript-Vue-SFC-Sublime-Text/AutocompleteTemplate.png" alt="Autocomplete suggestions in template" title="Autocomplete suggestions in template">
+<p>Definitions of Vue attributes:</p>
+<img src="/blog/2019/06/TypeScript-Vue-SFC-Sublime-Text/Definitions.png" alt="Vue attribute definitions" title="Vue attribute definitions">
+<p>TypeScript error checking:</p>
+<img src="/blog/2019/06/TypeScript-Vue-SFC-Sublime-Text/TypeError.png" alt="TypeScript error checking" title="TypeScript error checking">
+<img src="/blog/2019/06/TypeScript-Vue-SFC-Sublime-Text/TypeErrorConsole.png" alt="TypeScript errors summary in console" title="TypeScript errors summary in console">
+
+      
+    </div>
+
+    
+      
+
+    
+
+    <footer class="article-footer">
+      <a data-url="http://www.louisbourque.ca/blog/blog/2019/06/TypeScript-Vue-SFC-Sublime-Text/" data-id="cjwwv1vg400020f09jiwrg2io" class="article-share-link">
+        <i class="fa fa-share"></i> Share
+      </a>
+      
+      
+
+    </footer>
+  </div>
+  
+    
+<ul id="article-nav" class="nav nav-pills nav-justified">
+  
+  <li role="presentation">
+    <a href="/blog/2016/10/animated-input-label/" id="article-nav-older" class="article-nav-link-wrap">
+      <i class="fa fa-chevron-left pull-left"></i>
+      <span class="article-nav-link-title">Animated CSS Label</span>
+    </a>
+  </li>
+  
+  
+</ul>
+
+
+  
+</article>
+
+
+
+
+        </div>
+        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+          
+  <div class="sidebar-module sidebar-module-inset">
+  <h4>About</h4>
+  <p><a href="http://www.louisbourque.ca/">Louis Bourque</a>'s blog on developing software for the web. Full of helpful tips and interesting facts. Let's learn together.</p>
+
+</div>
+
+
+  
+
+
+  
+
+
+  
+
+  
+  <div class="sidebar-module">
+    <h4>Archives</h4>
+    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/archives/2019/06/">June 2019</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/archives/2016/10/">October 2016</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/archives/2016/09/">September 2016</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/archives/2016/08/">August 2016</a><span class="sidebar-module-list-count">1</span></li></ul>
+  </div>
+
+
+
+  
+  <div class="sidebar-module">
+    <h4>Recents</h4>
+    <ul class="sidebar-module-list">
+      
+        <li>
+          <a href="/blog/2019/06/TypeScript-Vue-SFC-Sublime-Text/">Support TypeScript with Vue SFC in Sublime Text</a>
+        </li>
+      
+        <li>
+          <a href="/blog/2016/10/animated-input-label/">Animated CSS Label</a>
+        </li>
+      
+        <li>
+          <a href="/blog/2016/09/Developer-Business-Card/">Free Developer Business Card</a>
+        </li>
+      
+        <li>
+          <a href="/blog/2016/08/hello-world/">Hello World</a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+
+        </div>
+    </div>
+  </div>
+  <footer class="blog-footer">
+  <div class="container">
+    <div id="footer-info" class="inner">
+      &copy; 2019 Louis Bourque<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+  
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" integrity="sha384-8gBf6Y4YYq7Jx97PIqmTwLPin4hxIzQw5aDmUg/DDhul9fFpbbLcLh3nTIIDJKhx" crossorigin="anonymous"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+
+
+<script src="/blog/js/script.js"></script>
+
+</body>
+</html>
